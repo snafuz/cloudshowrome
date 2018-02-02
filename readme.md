@@ -32,7 +32,7 @@ The server is providing rest API leveraging the following pyhton modules
 - _destroy_
 
         Destroy Terraform-managed infrastructure.
-    ##### NOTE: this will apply the configuration without asking for confirmation
+    ##### NOTE: this will destroy all without asking for confirmation
 
 ### Examples
 
