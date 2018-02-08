@@ -16,11 +16,23 @@ The server is providing rest API leveraging the following pyhton modules
 ```    
 ## Uage
 #### Run API Server
+To run the server as daemon
 ```bash
-    ./run-server
+    ./run-server.sh
     #API Server running on http://localhost:5000/
     
 ```
+
+To run the server in interactive mode 
+
+```bash
+    ./run-server-interactive.sh
+    #API Server running on http://localhost:5000/
+    
+```
+
+The server will run ***terraform init*** on the provided directory at startup
+
 ### Available API
 - _plan_
     
