@@ -14,7 +14,7 @@ The server is providing rest API leveraging the following pyhton modules
     git clone ...
     ./build.sh
 ```    
-## Uage
+## Usage
 #### Run API Server
 To run the server as daemon
 ```bash

@@ -16,6 +16,9 @@ t.init()
 @api.route('/apply')
 class TFPlan(Resource):
     def get(self):
+        
+        print('applying terraform configuration...')
+
         # force apply
         option_dict = dict()
         option_dict['auto-approve']=IsFlagged
@@ -30,7 +33,7 @@ class TFPlan(Resource):
             print(stderr)
             print('*****OUTPUT*****')
             print(stdout)
-            return {'plan': return_code, 'error': stderr, 'output': stdout}
+            return {'apply': return_code, 'error': stderr, 'output': stdout}
 
 
 @api.route('/plan')
@@ -46,12 +49,15 @@ class TFPlan(Resource):
             print(stderr)
             print('*****OUTPUT*****')
             print(stdout)
-            return {'apply': return_code, 'error':stderr, 'output':stdout}
+            return {'plan': return_code, 'error':stderr, 'output':stdout}
 
 
 @api.route('/destroy')
 class TFPlan(Resource):
     def get(self):
+        
+        print('destroying terraform configuration...')
+
         # WARNING FORCE DESTROY without confirmation
         option_dict = dict()
         option_dict['force'] = IsFlagged
