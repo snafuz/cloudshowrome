@@ -1,9 +1,7 @@
 from flask import Flask
 from flask_restplus import Api, Resource
-
 from python_terraform import *
-
-import  re
+import re
 
 
 app = Flask(__name__)
@@ -12,7 +10,7 @@ api = Api(app)
 terraform_file_path=sys.argv[1]
 print(terraform_file_path)
 t = Terraform(working_dir=terraform_file_path)
-
+t.init()
 
 
 @api.route('/apply')
