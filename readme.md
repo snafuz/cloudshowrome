@@ -22,6 +22,11 @@ To run the server as daemon
     #API Server running on http://localhost:5000/
     
 ```
+To stop the server
+```bash
+    ./stop-server.sh
+    
+```
 
 To run the server in interactive mode 
 
@@ -39,11 +44,11 @@ The server will run ***terraform init*** on the provided directory at startup
         shows an execution plan summary
 - _apply_
 
-        Builds or changes infrastructure according to Terraform configuration in the working directory
+        builds or changes infrastructure according to Terraform configuration in the working directory
     ##### NOTE: this will apply the configuration without asking for confirmation
 - _destroy_
 
-        Destroy Terraform-managed infrastructure.
+        destroy Terraform-managed infrastructure.
     ##### NOTE: this will destroy all without asking for confirmation
 
 ### Examples
